@@ -1,0 +1,12 @@
+name: trains
+services:
+  trains:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    image: trains-service
+    container_name: trains-service
+    ports:
+      - "8002:8002"
